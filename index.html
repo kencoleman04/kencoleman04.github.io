@@ -1,10 +1,34 @@
 <!DOCTYPE html>
 <html>
 <body>
+  
+<script>
+Array.prototype.sample = function(){
+  return this[Math.floor(Math.random()*this.length)];
+}
+  
+var todos = [ 'Do your work. It's kind of interesting.',
+              'Pick a home project and do it for 15 minutes.',
+              'Floss or probe your teeth',
+              'Play Ring Fit Adventure',
+              'Do ankle exercises so you don\'t get hurt again',
+              'Meditate for 15 minutes',
+              'Take a nap',
+              'Clean the kitchen - pick a drawer or area and clean it out',
+              'Pick part of the house and clean it for 15 minutes',
+              'Study Japanese for 10 minutes',
+              'Write in your journal for 10 minutes',
+              'Play a game' ]
 
-<h1>My First Heading</h1>
+</script>
 
-<p>My first paragraph.</p>
+<h1>My First JavaScript</h1>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = todos.sample()">
+Click me to get something to do</button>
+
+<p id="todo"></p>
 
 </body>
-</html>
+</html> 
